@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm audit fix --force'
+                sh 'npm install --no-audit'
             }
         }
         stage('Test') {
